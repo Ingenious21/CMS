@@ -1,0 +1,245 @@
+body{
+    background-color: #1d2a35 !important;
+}
+
+.hero {
+    background-image: url('#'); /* Unsplash image for hero section */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+button {
+padding: 1.3em 3em;
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+font-weight: 500;
+color: #000;
+background-color: #fff;
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+}
+
+button:hover {
+background-color: #23c483;
+box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+color: #fff;
+transform: translateY(-7px);
+}
+
+button:active {
+transform: translateY(-1px);
+}
+
+.card {
+position: relative;
+width: 250px;
+height: 314px;
+background-color: #fff;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 12px;
+gap: 12px;
+border-radius: 8px;
+cursor: pointer;
+}
+
+.card::before {
+content: '';
+position: absolute;
+inset: 0;
+left: -5px;
+margin: auto;
+width: 260px;
+height: 324px;
+border-radius: 10px;
+background: linear-gradient(-45deg, #347928 0%, #00FF9C 100% );
+z-index: -10;
+pointer-events: none;
+transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+content: "";
+z-index: -1;
+position: absolute;
+inset: 0;
+background: linear-gradient(-45deg, #347928 0%, #00FF9C 100% );
+transform: translate3d(0, 0, 0) scale(0.95);
+filter: blur(20px);
+}
+
+.heading {
+font-size: 20px;
+text-transform: capitalize;
+font-weight: 700;
+}
+
+.card p:not(.heading) {
+font-size: 14px;
+}
+
+.card p:last-child {
+color: #e81cff;
+font-weight: 600;
+}
+
+.card:hover::after {
+filter: blur(30px);
+}
+
+.card:hover::before {
+transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
+/* Styling for login */
+.login {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  
+  .login-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    width: 300px;
+    flex-direction: column;
+    gap: 35px;
+    background: #e3e3e3;
+    box-shadow: 16px 16px 32px #c8c8c8,
+          -16px -16px 32px #fefefe;
+    border-radius: 8px;
+  }
+  
+  .inputBox {
+    position: relative;
+    width: 250px;
+  }
+  
+  .inputBox input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: #000;
+    font-size: 1em;
+    background: transparent;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transition: 0.1s;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .inputBox span {
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    transform: translateY(-4px);
+    margin-left: 10px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 3px;
+    border-radius: 8px;
+  }
+  
+  .inputBox input:valid~span,
+  .inputBox input:focus~span {
+    transform: translateX(113px) translateY(-15px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #000;
+    letter-spacing: 0.2em;
+    color: #fff;
+    border: 2px;
+  }
+  
+  .inputBox input:valid,
+  .inputBox input:focus {
+    border: 2px solid #000;
+    border-radius: 8px;
+  }
+  
+  .enter {
+    height: 45px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+  }
+  
+  .enter:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+  
+  /* Style for the modal */
+  /* Modal size styling */
+.modal-dialog {
+max-width: 400px;
+margin: 150px auto;
+}
+
+/* Styling for the modal header */
+.modal-header {
+background-color: #f8d7da;  /* Default background color for error messages */
+border-bottom: 1px solid #f5c6cb;
+color: #721c24;
+}
+
+.modal-title {
+font-weight: bold;
+}
+
+/* General alert styling to override Bootstrap's defaults */
+.alert {
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 10px;
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+}
+
+/* Error alert styling */
+.alert-danger {
+background-color: #f8d7da;  /* Light red for error */
+color: #721c24;
+border: 1px solid #f5c6cb;
+}
+
+/* Close button styling */
+.btn-close {
+font-size: 1.2rem;
+}

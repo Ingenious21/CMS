@@ -6,10 +6,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
+<div class="container-fluid-sm|md">
+    {% include templates 'components/.header.html' %}
+
+    <!-- Login form -->
+    <div class="container mt-5 d-flex justify-content-center">
+        <form method="post" action="{% url 'login' %}">
+            <div class="login-card">
+                <a class="login">Log in</a>
+                <div class="inputBox">
+                    <input type="text" name="username" required="required">
+                    <span class="user">Username</span>
+                </div>
     
+                <div class="inputBox">
+                    <input type="password" name="password" required="required">
+                    <span>Password</span>
+                </div>
+    
+                <button class="enter">Enter</button>
+            </div>
+        </form>
+    </div>
+    <!-- end of login form -->
+    
+    <!-- This is a modal to display message to the user based on authentication -->
+    <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalLabel">System Alert</h5>
+                  <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Django message from the backend will appear here -->
+                  {% if messages %}
+                    {% for message in messages %}
+                      <div class="alert {% if message.tags %}alert{{ message.tags }}{% else %}alert-info{% endif %}">
+                        {{ message }}
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

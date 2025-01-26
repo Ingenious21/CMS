@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container-fluid-sm|md">
+    <!-- Navigation Bar -->
+     {% include header.html %}
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container-sm|md">
+            <h1>Welcome to the Clinic Management System</h1>
+            <blockquote class="blockquote">
+                <p>
+                  Welcome to the Ma-Watta Medical and Eye Clinic management system – 
+                  your all-in-one platform for providing efficient, accurate, and compassionate care. 
+                  Designed to streamline our workflow, this system ensures seamless patient registration, 
+                  payment tracking, and record management, allowing you to focus on what truly matters: 
+                  delivering exceptional medical and eye care services to our community. Together, 
+                  we are shaping a more organized, responsive, and patient-centered clinic experience.
+                </p>
+            </blockquote>
+
+            <a href="{% url 'login' %}">
+              <button class="mt-5">Log In</button>
+            </a>
+        </div>
+    </div>
+    
+    
+    <!-- Cards displaying quotes to motivate and inspire employees -->
+    <div class="container-sm|md text-center d-flex justify-content-center">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm mb-4 mt-4 mb-4">
+                <div class="card">
+                    <p class="heading">
+                      "Your service strengthens our community."
+                    </p>
+                    <p>
+                      Your role is vital in caring for families across Liberia. Together, we build a healthier tomorrow.
+                    </p>
+                    <p>
+                      "Compassionate care starts with a strong team."
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm mb-4 mt-4 mb-4">
+                <div class="card">
+                    <p class="heading">
+                      "Together, we make a difference."
+                    </p>
+                    <p>
+                      Your hard work ensures the best care for every patient. 
+                      Keep pushing forward with dedication and pride.
+                    </p>
+                    <p>
+                      "Excellence in care begins with you."
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm mb-4 mt-4 mb-4">
+                <div class="card">
+                    <p class="heading">
+                      "Bringing clarity and care to every patient."
+                    </p>
+                    <p>
+                      Your efforts help patients see the world better. Thanks for making every moment count.
+                    </p>
+                    <p>
+                      "Your work helps others see clearly."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
