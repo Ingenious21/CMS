@@ -9,18 +9,10 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
-    <!DOCTYPE html> 
-<html> 
-    <head> 
-        <title>Home</title> 
-    </head> <body> 
-        <h2>Welcome, {{user.username}} - Role {{user.role}}</h2> 
-        <a href = "{% url 'logout' %}"> Logout</a> 
-    </body> 
-</html>
+
 <div class="container-fluid-sm|md">
     <!-- Navigation Bar -->
-     {% include header.html %}
+     {% include 'components/header.html' %}
     
     <!-- Hero Section -->
     <div class="hero">
@@ -37,7 +29,7 @@
                 </p>
             </blockquote>
 
-            <a href="{% url 'login' %}">
+            
               <button class="mt-5">Log In</button>
             </a>
         </div>

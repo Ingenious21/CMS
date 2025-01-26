@@ -243,3 +243,7 @@ border: 1px solid #f5c6cb;
 .btn-close {
 font-size: 1.2rem;
 }
+
+aside {
+  background-color: #1d2a35;
+}

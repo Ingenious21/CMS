@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'medical',
     'billing',
     'inventory',
+    'core',
 ]
 
 AUTH_USER_MODEL = 'patients.CustomUser'
